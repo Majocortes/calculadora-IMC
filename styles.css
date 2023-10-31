@@ -6,9 +6,6 @@ body {
     align-items: center; /* Centra verticalmente el contenido */
     height: 100vh; /* Altura del cuerpo igual a la altura de la ventana del navegador */
     margin: 0; /* Sin márgenes en el cuerpo */
-    h1 {
-        text-align: center; /* Centra el texto horizontalmente en el elemento h1 */
-    }
     
 }
 

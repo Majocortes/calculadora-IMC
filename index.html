@@ -1,42 +1,51 @@
 <!DOCTYPE html> <!-- Declaración de tipo de documento HTML -->
-<html lang="es"> <!-- Configuración de idioma -->
+<html lang="es"> <!-- Configuración de idioma (español) -->
 <head>
-    <meta charset="UTF-8"> <!-- Configuración de codificación de caracteres -->
+    <meta charset="UTF-8"> <!-- Configuración de codificación de caracteres (UTF-8) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista en dispositivos móviles -->
     <title>Calculadora de IMC</title> <!-- Título de la página mostrado en la pestaña del navegador -->
     <link rel="stylesheet" href="styles.css"> <!-- Vínculo al archivo de estilos CSS -->
 </head>
 <body>
     <div class="container"> <!-- Contenedor principal -->
-        <h1>Calculadora de IMC</h1> <!-- Encabezado principal de la página -->
-        <!-- Espacio para la imagen centrada -->
+        <h1>Calculadora de IMC</h1> <!-- Encabezado principal de la página centrado horizontalmente -->
+
         <div class="image-container"> <!-- Contenedor para la imagen -->
-            <img src="indice.png" alt="Imagen" id="imagen"> <!-- Etiqueta de imagen -->
-        </div>
-        <form id="imcForm"> <!-- Formulario de la calculadora de IMC -->
-            <label for="seleccion">Seleccione el grupo:</label> <!-- Etiqueta para seleccionar el grupo -->
-            <select id="seleccion" required> <!-- Menú desplegable de selección -->
-                <option value="adulto">Adulto</option> <!-- Opción para adultos -->
-                <option value="niño">Niño</option> <!-- Opción para niños -->
-            </select><br>
-            <label for="peso">Peso (kg):</label> <!-- Etiqueta para ingresar el peso -->
-            <input type="number" id="peso" min="0" oninput="validarNumero(this)" required><br> <!-- Entrada de número para el peso -->
-            <label for "altura">Altura (cm):</label> <!-- Etiqueta para ingresar la altura -->
-            <input type="number" id="altura" min="0" oninput="validarNumero(this)" required><br> <!-- Entrada de número para la altura -->
-            <button class="calcular" type="button" onclick="calcularIMC()">Calcular IMC</button> <!-- Botón para calcular el IMC -->
-            <button class="info" type="button" onclick="mostrarInformacion()">Qué es el IMC</button> <!-- Botón para mostrar información sobre el IMC -->
-            <button class="borrar" type="reset">Borrar todo</button> <!-- Botón para borrar todos los campos -->
-        </form>
-        <div id="resultado" style="display:none;"> <!-- Resultado de la calculadora, inicialmente oculto -->
-            <h2>Resultado</h2> <!-- Encabezado de resultado -->
-            <p id="mensaje"></p> <!-- Párrafo para mostrar el resultado del IMC -->
+            <img src="indice.png" alt="Imagen" id="imagen"> <!-- Imagen con descripción alternativa -->
         </div>
 
-        <!-- Texto en la esquina superior derecha -->
+        <form id="imcForm"> <!-- Formulario de la calculadora de IMC -->
+            <label for="seleccion">Seleccione el grupo:</label> <!-- Etiqueta para el campo de selección -->
+            <select id="seleccion" required> <!-- Campo de selección con validación requerida -->
+                <option value="adulto">Adulto</option> <!-- Opción para adultos -->
+                <option value="niño">Niño</option> <!-- Opción para niños -->
+            </select><br> <!-- Salto de línea -->
+            <label for="peso">Peso (kg):</label> <!-- Etiqueta para el campo de peso -->
+            <input type="number" id="peso" min="0" oninput="validarNumero(this)" required><br> <!-- Campo de entrada numérica para el peso con validación requerida y función para validar números -->
+            <label for="altura">Altura (cm):</label> <!-- Etiqueta para el campo de altura -->
+            <input type="number" id="altura" min="0" oninput="validarNumero(this)" required><br> <!-- Campo de entrada numérica para la altura con validación requerida y función para validar números -->
+            <button class="calcular" type="button" onclick="calcularIMC()">Calcular IMC</button> <!-- Botón para calcular el IMC con función asociada -->
+            <button class="info" type="button" onclick="mostrarInformacion()">Qué es el IMC</button> <!-- Botón para mostrar información sobre el IMC con función asociada -->
+            <button class="borrar" type="reset">Borrar todo</button> <!-- Botón para borrar todos los campos del formulario -->
+        </form>
+
+        <div id="resultado" style="display:none;"> <!-- Div para mostrar el resultado con estilo inicial de no mostrar (display: none) -->
+            <h2>Resultado</h2> <!-- Encabezado de resultado -->
+            <p id="mensaje"></p> <!-- Párrafo para mostrar el mensaje de resultado -->
+        </div>
+
         <h1 id="esquina-superior-derecha"> <!-- Título h1 en la esquina superior derecha -->
             Maria Jose Cortes 11-06
         </h1>
+
+        <div id="bibliografia"> <!-- Div para la sección de bibliografía -->
+            <p>Bibliografía:</p> <!-- Párrafo que indica bibliografía -->
+            <a href="https://www.cdc.gov/healthyweight/spanish/assessing/bmi/adult_bmi/metric_bmi_calculator/bmi_calculator.html" target="_blank">Calculadora de IMC en CDC</a> <!-- Enlace a la calculadora de IMC en CDC en una nueva pestaña -->
+            <br> <!-- Salto de línea -->
+            <a href="https://www.texasheart.org/heart-health/heart-information-center/topics/calculadora-del-indice-de-masa-corporal-imc/" target="_blank">Calculadora de IMC en Texas Heart Institute</a> <!-- Enlace a la calculadora de IMC en Texas Heart Institute en una nueva pestaña -->
+        </div>
     </div>
     
-    <script src="script.js"></script> <!-- Vínculo al archivo JavaScript -->
+    <script src="script.js"></script> <!-- Vínculo al archivo JavaScript para la funcionalidad -->
 </body>
+</html>
