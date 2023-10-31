@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif; /* Tipo de fuente para el cuerpo de la página */
+    background-color: #F5E1DA; /* Color de fondo del cuerpo */
+    display: flex; /* Uso de flexbox para centrar el contenido verticalmente y horizontalmente */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Altura del cuerpo igual a la altura de la ventana del navegador */
+    margin: 0; /* Sin márgenes en el cuerpo */
+    h1 {
+        text-align: center; /* Centra el texto horizontalmente en el elemento h1 */
+    }
+    
+}
+
+.container {
+    max-width: 400px; /* Ancho máximo del contenedor principal */
+    background-color: #FFC2E2; /* Color de fondo del contenedor principal */
+    padding: 20px; /* Espaciado interno del contenedor principal */
+    border-radius: 10px; /* Radio de borde del contenedor principal */
+    margin: 0 auto; /* Margen automático para centrar el contenedor en la página */
+}
+
+.image-container {
+    text-align: center; /* Centra horizontalmente el contenido del contenedor de imagen */
+}
+
+#imagen {
+    max-width: 100%; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática de la imagen */
+}
+
+input[type="number"] {
+    width: 100%; /* Ancho completo para las entradas de número */
+    padding: 8px; /* Espaciado interno de las entradas de número */
+    margin: 5px 0; /* Márgenes vertical para las entradas de número */
+    box-sizing: border-box; /* Caja de modelo de borde para que el ancho incluya el relleno y el borde */
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 20px; /* Espaciado interno de los botones */
+    margin: 10px; /* Márgenes entre los botones */
+    font-size: 16px; /* Tamaño de fuente de los botones */
+    border: none; /* Sin borde en los botones */
+    cursor: pointer; /* Cursor tipo puntero al pasar por encima de los botones */
+}
+
+button.calcular {
+    background-color: #B085FF; /* Color de fondo para el botón "Calcular IMC" */
+    color: white; /* Color del texto en el botón "Calcular IMC" */
+}
+
+button.info {
+    background-color: #B085FF; /* Color de fondo para el botón "Qué es el IMC" */
+    color: white; /* Color del texto en el botón "Qué es el IMC" */
+}
+
+button.borrar {
+    background-color: #FF6F61; /* Color de fondo para el botón "Borrar todo" */
+    color: white; /* Color del texto en el botón "Borrar todo" */
+}
+
+#resultado {
+    background-color: #FFBBCE; /* Color de fondo del resultado */
+    border-radius: 10px; /* Radio de borde del resultado */
+    padding: 10px; /* Espaciado interno del resultado */
+    margin-top: 20px; /* Margen superior del resultado */
+    text-align: center; /* Texto centrado en el resultado */
+}
+
+#esquina-superior-derecha {
+    position: absolute; /* Posición absoluta para colocar el texto en la esquina superior derecha */
+    top: 10px; /* Desde la parte superior 10px */
+    right: 10px; /* Desde la parte derecha 10px */
+    color: #800080; /* Color morado */
+}
